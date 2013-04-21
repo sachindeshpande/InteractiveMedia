@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Projects\InteractiveMediaLab\Kinect\Samples\Kinect Toolbox\Sources\obj\Debug\
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\obj\Debug\
 Kinect.Toolbox
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 2652158870
 
 51-1120126241
-171738285018
+17669716462
 Controls\PresenceControl.xaml;Controls\MouseImpostor.xaml;
 
 False

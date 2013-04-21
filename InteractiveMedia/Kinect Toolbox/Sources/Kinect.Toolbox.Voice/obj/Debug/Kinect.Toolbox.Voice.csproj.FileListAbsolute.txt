@@ -3,3 +3,8 @@ C:\Projects\InteractiveMediaLab\Kinect\Samples\Kinect Toolbox\Sources\Kinect.Too
 C:\Projects\InteractiveMediaLab\Kinect\Samples\Kinect Toolbox\Sources\Kinect.Toolbox.Voice\obj\Debug\Kinect.Toolbox.Voice.csprojResolveAssemblyReference.cache
 C:\Projects\InteractiveMediaLab\Kinect\Samples\Kinect Toolbox\Sources\Kinect.Toolbox.Voice\obj\Debug\Kinect.Toolbox.Voice.dll
 C:\Projects\InteractiveMediaLab\Kinect\Samples\Kinect Toolbox\Sources\Kinect.Toolbox.Voice\obj\Debug\Kinect.Toolbox.Voice.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\Kinect.Toolbox.Voice\bin\Debug\Kinect.Toolbox.Voice.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\Kinect.Toolbox.Voice\bin\Debug\Kinect.Toolbox.Voice.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\Kinect.Toolbox.Voice\obj\Debug\Kinect.Toolbox.Voice.csprojResolveAssemblyReference.cache
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\Kinect.Toolbox.Voice\obj\Debug\Kinect.Toolbox.Voice.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\Kinect.Toolbox.Voice\obj\Debug\Kinect.Toolbox.Voice.pdb

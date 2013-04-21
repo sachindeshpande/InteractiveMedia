@@ -262,13 +262,14 @@ namespace GesturesViewer
 
                     if (joint.JointType == JointType.HandRight)
                     {
-                        circleGestureRecognizer.Add(joint.Position, kinectSensor);
+                        if (controlMouse.IsChecked == true)
+                            MouseController.Current.SetHandPosition(kinectSensor, joint, skeleton);
+
                     }
                     else if (joint.JointType == JointType.HandLeft)
                     {
                         swipeGestureRecognizer.Add(joint.Position, kinectSensor);
-                        if (controlMouse.IsChecked == true)
-                            MouseController.Current.SetHandPosition(kinectSensor, joint, skeleton);
+                        circleGestureRecognizer.Add(joint.Position, kinectSensor);
                     }
                 }
 

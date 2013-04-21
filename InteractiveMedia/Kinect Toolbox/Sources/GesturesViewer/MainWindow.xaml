@@ -73,7 +73,7 @@
             <Button Content="Capture T" x:Name="recordT" Click="recordT_Click" VerticalAlignment="Center" Grid.Row="3" Width="Auto"/>
             <CheckBox Content="Near Mode" x:Name="nearMode" Grid.Row="4" VerticalContentAlignment="Top" Checked="nearMode_Checked_1" Unchecked="nearMode_Unchecked_1"/>
             <CheckBox Content="Seated Mode" x:Name="seatedMode" Grid.Row="5" VerticalContentAlignment="Top" Checked="seatedMode_Checked_1" Unchecked="seatedMode_Unchecked_1" IsChecked="True"/>
-            <CheckBox Content="Control Mouse" x:Name="controlMouse" Grid.Row="6" VerticalContentAlignment="Top"/>
+            <CheckBox Content="Control Mouse" x:Name="controlMouse" Grid.Row="6" VerticalContentAlignment="Top" IsChecked="True"/>
         </Grid>
         <TextBlock Text="DETECTED GESTURES" Grid.Column="1" Grid.Row="2" Margin="4"/>
         <ListBox x:Name="detectedGestures" FontSize="20" Grid.Column="1" Margin="10,10,10,0" Grid.Row="3"/>

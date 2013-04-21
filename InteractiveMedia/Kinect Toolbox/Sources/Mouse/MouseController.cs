@@ -251,6 +251,12 @@ namespace Kinect.Toolbox
             permanentClick = true;
         }
 
+        public void DisableLeftButtonClick()
+        {
+            //mouse_event(MOUSEEVENTF_LEFTDOWN, xpos, ypos, 0, 0);   
+            permanentClick = false;
+        }
+
         public void SetHandPosition(KinectSensor sensor, Joint joint, Skeleton skeleton)
         {
             Vector2 vector2 = FilterJointPosition(sensor, joint);
