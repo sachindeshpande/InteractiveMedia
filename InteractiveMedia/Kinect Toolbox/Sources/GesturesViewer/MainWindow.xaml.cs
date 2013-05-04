@@ -8,9 +8,12 @@ using System.IO;
 using Microsoft.Kinect;
 using Microsoft.Win32;
 using Kinect.Toolbox.Voice;
+using Gestures.DataStructures;
 
 namespace GesturesViewer
 {
+    using SocketIoClient;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -165,7 +168,8 @@ namespace GesturesViewer
             parallelCombinedGestureDetector.Add(circleGestureRecognizer);
 
             MouseController.Current.DisableGestureClick = false;
-//            kinectSensor.SkeletonStream.TrackingMode = SkeletonTrackingMode.Seated;
+
+            //            kinectSensor.SkeletonStream.TrackingMode = SkeletonTrackingMode.Seated;
         }
 
         void kinectSensor_DepthFrameReady(object sender, DepthImageFrameReadyEventArgs e)
@@ -263,7 +267,10 @@ namespace GesturesViewer
                     if (joint.JointType == JointType.HandRight)
                     {
                         if (controlMouse.IsChecked == true)
-                            MouseController.Current.SetHandPosition(kinectSensor, joint, skeleton);
+                        {
+                            MouseControllerAction action = MouseController.Current.SetHandPosition(kinectSensor, joint, skeleton);
+//                            BroadcastManager.GetBroadcastEngine().ScheduleForBroadcasting(new JSonMouseInfo(action));
+                        }
 
                     }
                     else if (joint.JointType == JointType.HandLeft)

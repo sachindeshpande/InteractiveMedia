@@ -1,0 +1,8 @@
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\DataStructures\bin\Debug\DataStructures.dll.config
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\DataStructures\bin\Debug\DataStructures.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\DataStructures\bin\Debug\DataStructures.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\DataStructures\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\DataStructures\bin\Debug\Newtonsoft.Json.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\DataStructures\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\DataStructures\obj\Debug\DataStructures.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\DataStructures\obj\Debug\DataStructures.pdb

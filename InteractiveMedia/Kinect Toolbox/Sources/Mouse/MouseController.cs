@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
 using Microsoft.Kinect;
+using Gestures.DataStructures;
 
 namespace Kinect.Toolbox
 {
@@ -257,15 +258,18 @@ namespace Kinect.Toolbox
             permanentClick = false;
         }
 
-        public void SetHandPosition(KinectSensor sensor, Joint joint, Skeleton skeleton)
+        public MouseControllerAction SetHandPosition(KinectSensor sensor, Joint joint, Skeleton skeleton)
         {
+            MouseControllerAction action = new MouseControllerAction();
+            action.mouseMove = false;
+
             Vector2 vector2 = FilterJointPosition(sensor, joint);
 
             if (!lastKnownPosition.HasValue)
             {
                 lastKnownPosition = vector2;
                 previousDepth = joint.Position.Z;
-                return;
+                return action;
             }
 
             bool isClicked = false;
@@ -351,14 +355,22 @@ namespace Kinect.Toolbox
             }
             else
             {
-                MouseInterop.ControlMouse((int)((vector2.X - lastKnownPosition.Value.X) * Screen.PrimaryScreen.Bounds.Width * GlobalSmooth), (int)((vector2.Y - lastKnownPosition.Value.Y) * Screen.PrimaryScreen.Bounds.Height * GlobalSmooth), permanentClick);
+                action.mouseMove = true;
+                action.dx =
+                    (int)((vector2.X - lastKnownPosition.Value.X) * Screen.PrimaryScreen.Bounds.Width * GlobalSmooth);
+                action.dy =
+                    (int)((vector2.Y - lastKnownPosition.Value.Y) * Screen.PrimaryScreen.Bounds.Height * GlobalSmooth);
+                MouseInterop.ControlMouse(action.dx, action.dy, permanentClick);
                 lastKnownPosition = vector2;
+                
             }
 
 
             previousDepth = joint.Position.Z;
 
             clickGestureDetected = false;
+
+            return action;
         }
     }
     

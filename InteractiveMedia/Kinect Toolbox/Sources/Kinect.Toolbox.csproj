@@ -130,6 +130,12 @@
   <ItemGroup>
     <None Include="Libs\Microsoft.Kinect.Toolkit.FaceTracking.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GesturesDataStructures\GesturesDataStructures.csproj">
+      <Project>{8258eba4-b6b5-4fd1-bb41-cba22f7fe979}</Project>
+      <Name>GesturesDataStructures</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

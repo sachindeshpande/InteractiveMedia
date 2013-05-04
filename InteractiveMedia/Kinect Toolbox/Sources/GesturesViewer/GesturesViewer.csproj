@@ -111,6 +111,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GesturesDataStructures\GesturesDataStructures.csproj">
+      <Project>{8258eba4-b6b5-4fd1-bb41-cba22f7fe979}</Project>
+      <Name>GesturesDataStructures</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Kinect.Toolbox.csproj">
       <Project>{2C84CE43-CDAB-4541-A55A-7F849E8AC247}</Project>
       <Name>Kinect.Toolbox</Name>
@@ -118,6 +122,10 @@
     <ProjectReference Include="..\Kinect.Toolbox.Voice\Kinect.Toolbox.Voice.csproj">
       <Project>{09DAE56B-715F-4069-BB66-A110D876A772}</Project>
       <Name>Kinect.Toolbox.Voice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketIOClient\SocketIOClient.csproj">
+      <Project>{886e8cb4-32de-4cf2-a6bb-a145ff4b303e}</Project>
+      <Name>SocketIOClient</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

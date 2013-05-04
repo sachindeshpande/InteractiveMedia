@@ -1,0 +1,6 @@
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\GesturesDataStructures\bin\Debug\GesturesDataStructures.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\GesturesDataStructures\bin\Debug\GesturesDataStructures.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\GesturesDataStructures\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\GesturesDataStructures\obj\Debug\GesturesDataStructures.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\GesturesDataStructures\obj\Debug\GesturesDataStructures.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\GesturesDataStructures\obj\Debug\GesturesDataStructures.csprojResolveAssemblyReference.cache

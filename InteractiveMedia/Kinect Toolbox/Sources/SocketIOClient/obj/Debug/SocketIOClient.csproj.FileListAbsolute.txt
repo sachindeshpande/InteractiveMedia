@@ -1,0 +1,24 @@
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\TestProject.exe.config
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\TestProject.exe
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\TestProject.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SocketIOClient.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SuperSocket.ClientEngine.Common.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SuperSocket.ClientEngine.Core.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SuperSocket.ClientEngine.Protocol.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SuperSocket.ClientEngine.Proxy.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SuperSocket.ClientEngine.Common.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SuperSocket.ClientEngine.Core.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SuperSocket.ClientEngine.Protocol.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\bin\Debug\SuperSocket.ClientEngine.Proxy.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\obj\Debug\TestProject.exe
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\obj\Debug\TestProject.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Samples\SkeletonBasics-WPFTest1\SocketIOClient\obj\Debug\SocketIOClient.csprojResolveAssemblyReference.cache
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\SocketIOClient\bin\Debug\TestProject.exe.config
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\SocketIOClient\bin\Debug\TestProject.exe
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\SocketIOClient\bin\Debug\TestProject.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\SocketIOClient\bin\Debug\SocketIOClient.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\SocketIOClient\bin\Debug\WebSocket4Net.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\SocketIOClient\obj\Debug\TestProject.exe
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\SocketIOClient\obj\Debug\TestProject.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\Kinect Toolbox\Sources\SocketIOClient\obj\Debug\SocketIOClient.csprojResolveAssemblyReference.cache

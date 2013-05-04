@@ -102,9 +102,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GesturesDataStructures\GesturesDataStructures.csproj">
+      <Project>{8258EBA4-B6B5-4FD1-BB41-CBA22F7FE979}</Project>
+      <Name>GesturesDataStructures</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Kinect.Toolbox.csproj">
       <Project>{2c84ce43-cdab-4541-a55a-7f849e8ac247}</Project>
       <Name>Kinect.Toolbox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketIOClient\SocketIOClient.csproj">
+      <Project>{886E8CB4-32DE-4CF2-A6BB-A145FF4B303E}</Project>
+      <Name>SocketIOClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

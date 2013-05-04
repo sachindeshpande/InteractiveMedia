@@ -17,6 +17,10 @@ using Kinect.Toolbox;
 
 namespace KinectUI
 {
+    using Gestures.DataStructures;
+
+    using SocketIoClient;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -139,7 +143,8 @@ namespace KinectUI
 
                         if (joint.JointType == JointType.HandRight)
                         {
-                            MouseController.Current.SetHandPosition(kinectSensor, joint, skeleton);
+                            MouseControllerAction action = MouseController.Current.SetHandPosition(kinectSensor, joint, skeleton);
+                            BroadcastManager.GetBroadcastEngine().ScheduleForBroadcasting(action);
                         }
                     }
                 }

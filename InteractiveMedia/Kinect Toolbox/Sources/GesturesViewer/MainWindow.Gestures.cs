@@ -41,13 +41,20 @@ namespace GesturesViewer
             detectedGestures.SelectedIndex = pos;
             Console.Out.WriteLine(gesture);
             if (gesture.Contains("Circle"))
-                Application.Current.Shutdown();
+                //Application.Current.Shutdown();
+                Console.Out.WriteLine("Detected Circle");
             else if (gesture.Contains("SwipeToLeft"))
+            {
+                Console.Out.WriteLine("Detected SwipeToLeft");
                 MouseController.Current.EnableLeftButtonClick();
+            }
             else if (gesture.Contains("SwipeToRight"))
+            {
+                Console.Out.WriteLine("Detected SwipeToRight");
                 MouseController.Current.DisableLeftButtonClick();
+            }
 
-            
+
         }
 
         void CloseGestureDetector()

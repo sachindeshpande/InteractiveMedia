@@ -1,0 +1,14 @@
+C:\Projects\InteractiveMediaLab\Kinect\Samples\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\FaceTrackData.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\FaceTrackLib.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\Microsoft.Kinect.Toolkit.FaceTracking.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Samples\Microsoft.Kinect.Toolkit.FaceTracking\obj\Win32\Debug\Microsoft.Kinect.Toolkit.FaceTracking.csprojResolveAssemblyReference.cache
+C:\Projects\InteractiveMediaLab\Kinect\Samples\Microsoft.Kinect.Toolkit.FaceTracking\obj\Win32\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll
+C:\Projects\InteractiveMediaLab\Kinect\Samples\Microsoft.Kinect.Toolkit.FaceTracking\obj\Win32\Debug\Microsoft.Kinect.Toolkit.FaceTracking.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\FaceTrackData.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\FaceTrackLib.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\Microsoft.Kinect.Toolkit.FaceTracking.pdb
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\Microsoft.Kinect.Toolkit.FaceTracking\obj\Win32\Debug\Microsoft.Kinect.Toolkit.FaceTracking.csprojResolveAssemblyReference.cache
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\Microsoft.Kinect.Toolkit.FaceTracking\obj\Win32\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\Microsoft.Kinect.Toolkit.FaceTracking\obj\Win32\Debug\Microsoft.Kinect.Toolkit.FaceTracking.pdb
