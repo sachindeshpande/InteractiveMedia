@@ -7,8 +7,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Image Name="ColorImage" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-2,0,2" />
-        <Viewport3D Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="viewport3d" RenderTransformOrigin="0.5,0.5" Margin="0,1,0,-1" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".25*"/>            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".25*"/>
+            <ColumnDefinition Width=".25*"/>
+            <ColumnDefinition Width=".25*"/>
+            <ColumnDefinition Width=".25*"/>            
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.RowSpan="4" Grid.ColumnSpan="4" Name="ColorImage" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-2,0,2"/>
+        <Viewport3D Grid.RowSpan="4" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="viewport3d" RenderTransformOrigin="0.5,0.5" Margin="0,1,0,-1" >
             <Viewport3D.RenderTransform>
                 <ScaleTransform ScaleX="2.0" ScaleY="2.0"></ScaleTransform>
             </Viewport3D.RenderTransform>
@@ -63,18 +76,129 @@
                             <!-- Apply a transform to the object. In this sample, a rotation transform is applied, rendering the 
                          3D object rotated. -->
                             <GeometryModel3D.Transform>
-                                <RotateTransform3D>
-                                    <RotateTransform3D.Rotation>
-                                        <AxisAngleRotation3D Axis="0,3,0" Angle="0" />
-                                    </RotateTransform3D.Rotation>
-                                </RotateTransform3D>
+                                <Transform3DGroup>
+                                    <ScaleTransform3D ScaleX="1.5" ScaleY="1.5"/>
+                                    <!--<TranslateTransform3D OffsetY="-1"/>-->                                
+                                    <!--<RotateTransform3D>
+                                        <RotateTransform3D.Rotation>
+                                            <AxisAngleRotation3D Axis="0,3,0" Angle="0" />
+                                        </RotateTransform3D.Rotation>
+                                    </RotateTransform3D>-->
+                                    </Transform3DGroup>
                             </GeometryModel3D.Transform>
+
                         </GeometryModel3D>
                     </ModelVisual3D.Content>
                 </ModelVisual3D>
             </Viewport3D.Children>
 
         </Viewport3D>
-        <Image Name="FaceImage" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="-108,-102,145,148" Height="254" Width="263" />
+
+        <Grid Name="FaceImageGrid00" Grid.Row="0" Grid.Column="0" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage00"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid01" Grid.Row="0" Grid.Column="1" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage01"/>
+            </Viewbox>
+        </Grid>
+
+
+        <Grid Name="FaceImageGrid02" Grid.Row="0" Grid.Column="2" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage02"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid03" Grid.Row="0" Grid.Column="3" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage03"/>
+            </Viewbox>
+        </Grid>
+
+
+        <Grid Name="FaceImageGrid10" Grid.Row="1" Grid.Column="0" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage10"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid11" Grid.Row="1" Grid.Column="1" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage11"/>
+            </Viewbox>
+        </Grid>
+
+
+        <Grid Name="FaceImageGrid12" Grid.Row="1" Grid.Column="2" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage12"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid13" Grid.Row="1" Grid.Column="3" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage13"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid20" Grid.Row="2" Grid.Column="0" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage20"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid21" Grid.Row="2" Grid.Column="1" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage21"/>
+            </Viewbox>
+        </Grid>
+
+
+        <Grid Name="FaceImageGrid22" Grid.Row="2" Grid.Column="2" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage22"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid23" Grid.Row="2" Grid.Column="3" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage23"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid30" Grid.Row="3" Grid.Column="0" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage30"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid31" Grid.Row="3" Grid.Column="1" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage31"/>
+            </Viewbox>
+        </Grid>
+
+
+        <Grid Name="FaceImageGrid32" Grid.Row="3" Grid.Column="2" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage32"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="FaceImageGrid33" Grid.Row="3" Grid.Column="3" Height="150" Width="150">
+            <Viewbox>
+                <Image Name="FaceImage33"/>
+            </Viewbox>
+        </Grid>
+
+
+
+
+
+        <!--<Image Name="FaceImage" Source="Images\wheel.png" Visibility="Collapsed"/>-->
     </Grid>
 </UserControl>
