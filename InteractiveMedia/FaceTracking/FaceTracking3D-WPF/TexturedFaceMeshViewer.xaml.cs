@@ -60,6 +60,7 @@ namespace FaceTracking3D
             }
         }
 
+
         public Grid ParentGrid
         {
             get
@@ -398,7 +399,8 @@ namespace FaceTracking3D
 
         private void UpdateMesh(FaceTrackFrame faceTrackingFrame)
         {
-            int multiplier = 1;
+            //Console.Out.WriteLine(" ###################### In UpdateMesh ############################# ");
+            bool faceInCentre = true;
 
             EnumIndexableCollection<FeaturePoint, Vector3DF> shapePoints = faceTrackingFrame.Get3DShape();
             EnumIndexableCollection<FeaturePoint, PointF> projectedShapePoints = faceTrackingFrame.GetProjected3DShape();
@@ -430,18 +432,24 @@ namespace FaceTracking3D
             // Update the 3D model's vertices and texture coordinates
             for (int pointIndex = 0; pointIndex < shapePoints.Count; pointIndex++)
             {
+
                 Vector3DF point = shapePoints[pointIndex];
-                this.theGeometry.Positions[pointIndex] = new Point3D(point.X * multiplier, point.Y * multiplier, -point.Z * multiplier);
+                this.theGeometry.Positions[pointIndex] = new Point3D(point.X, point.Y, -point.Z);
 
                 PointF projected = projectedShapePoints[pointIndex];
 
                 this.theGeometry.TextureCoordinates[pointIndex] =
                     new Point(
-                        projected.X * multiplier / (double)this.colorImageWritableBitmap.PixelWidth,
-                        projected.Y * multiplier / (double)this.colorImageWritableBitmap.PixelHeight);
+                        projected.X/ (double)this.colorImageWritableBitmap.PixelWidth,
+                        projected.Y/ (double)this.colorImageWritableBitmap.PixelHeight);
+
+//                Console.Out.WriteLine("X = " + projected.X / (double)this.colorImageWritableBitmap.PixelWidth  + "Y = " + projected.Y / (double)this.colorImageWritableBitmap.PixelHeight);
+                if (projected.X / (double)this.colorImageWritableBitmap.PixelWidth > .6 || 
+                    projected.Y / (double)this.colorImageWritableBitmap.PixelHeight > .75) faceInCentre = false;
             }
 
-            copyFaceImage();
+            if (faceInCentre)
+                copyFaceImage();
         }
 
         private void copyFaceImage()
@@ -453,7 +461,7 @@ namespace FaceTracking3D
                 return;
 
             int width = 600;
-            int height = 400;
+            int height = 600;
 
             viewport3d.Width = width;
 
@@ -550,6 +558,11 @@ namespace FaceTracking3D
             da.RepeatBehavior = RepeatBehavior.Forever;
             rt.BeginAnimation(TranslateTransform.XProperty, da);
             
+        }
+
+
+        private void setupPathAnimation()
+        {
         }
     }
 }

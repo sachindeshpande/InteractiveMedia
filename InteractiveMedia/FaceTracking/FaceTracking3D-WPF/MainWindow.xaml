@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:FaceTracking3D"
         Title="Face Tracking 3D"
-        Height="735" Width="770" 
+        Height="735" Width="1024" 
         >
 
     <Window.Resources>
@@ -16,6 +16,10 @@
     </Window.Resources>
 
     <Grid Name="layoutGrid" Margin="10 0 10 10">
+        <Grid.Background>
+            <ImageBrush ImageSource="Images\Kinetech.png" Opacity="0.3"/>
+        </Grid.Background>
+        <!--
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -24,8 +28,8 @@
             <Image DockPanel.Dock="Left" Source="Images\Logo.png" Stretch="Fill" Height="32" Width="81" Margin="0 10 0 5"/>
             <TextBlock DockPanel.Dock="Right" Margin="0 0 -1 0"  VerticalAlignment="Bottom" Foreground="{StaticResource MediumGreyBrush}" FontFamily="Segoe UI" FontSize="18">Face Tracking 3D</TextBlock>
             <Image Grid.Column="1" Source="Images\Status.png" Stretch="None" HorizontalAlignment="Center" Margin="0 0 0 5"/>
-        </DockPanel>
-        <Viewbox Grid.Row="1" Stretch="Uniform" HorizontalAlignment="Center">
+        </DockPanel> -->
+        <Viewbox Stretch="Uniform" HorizontalAlignment="Center">
             <Grid>
                 <local:TexturedFaceMeshViewer x:Name="faceTrackingVisualizer" />
             </Grid>
