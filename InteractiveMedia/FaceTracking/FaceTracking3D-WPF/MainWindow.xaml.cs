@@ -7,6 +7,7 @@
 namespace FaceTracking3D
 {
     using System;
+    using System.ComponentModel;
     using System.Windows;
     using System.Windows.Data;
 
@@ -25,6 +26,8 @@ namespace FaceTracking3D
             this.Closed += this.WindowClosed;
             this.InitializeComponent();
 
+            this.faceTrackingVisualizer.PropertyChanged += FaceTrackingVisualizerOnPropertyChanged;
+
             var kinectSensorBinding = new Binding("Kinect") { Source = this.sensorChooser };
             this.faceTrackingVisualizer.SetBinding(TexturedFaceMeshViewer.KinectProperty, kinectSensorBinding);
 
@@ -32,6 +35,7 @@ namespace FaceTracking3D
 
             this.sensorChooser.Start();
         }
+
 
         /// <summary>
         /// Setup the sensor for any components in this app that will be using it.
@@ -92,5 +96,12 @@ namespace FaceTracking3D
             this.sensorChooser.Stop();
             this.faceTrackingVisualizer.Dispose();
         }
+
+        private void FaceTrackingVisualizerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+        {
+            //Console.Out.WriteLine("In FaceTrackingVisualizerOnPropertyChanged");
+            this.faceGridPanel.copyFaceImage(this.faceTrackingVisualizer.viewport3d);
+        }
+
     }
 }

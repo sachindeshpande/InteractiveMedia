@@ -7,6 +7,7 @@
 namespace FaceTracking3D
 {
     using System;
+    using System.ComponentModel;
     using System.Diagnostics;
     using System.Drawing;
     using System.IO;
@@ -28,59 +29,28 @@ namespace FaceTracking3D
     using PointF = Microsoft.Kinect.Toolkit.FaceTracking.PointF;
     using Size = System.Windows.Size;
 
-    public class FaceImageGridUnit
+    public class FaceMesh
     {
-        private System.Windows.Controls.Image imageObj;
-
-        private RenderTargetBitmap bmp;
-
-        private Grid parentGrid;
-
-        public System.Windows.Controls.Image ImageObj
+        private Viewport3D faceViewport;
+        public Viewport3D FaceViewport
         {
             get
             {
-                return this.imageObj;
+                return this.faceViewport;
             }
             set
             {
-                this.imageObj = value;
-            }
-        }
-
-        public RenderTargetBitmap Bmp
-        {
-            get
-            {
-                return this.bmp;
-            }
-            set
-            {
-                this.bmp = value;
-            }
-        }
-
-
-        public Grid ParentGrid
-        {
-            get
-            {
-                return this.parentGrid;
-            }
-            set
-            {
-                this.parentGrid = value;
+                this.faceViewport = value;
             }
         }
     }
+
 
     /// <summary>
     /// Interaction logic for TexturedFaceMeshViewer.xaml
     /// </summary>
     public partial class TexturedFaceMeshViewer : UserControl, IDisposable
     {
-        private const int IMAGE_MATRIX_WIDTH = 4;
-        private const int IMAGE_MATRIX_HEIGHT = 4;
 
         public static readonly DependencyProperty KinectProperty = DependencyProperty.Register(
             "Kinect", 
@@ -90,6 +60,8 @@ namespace FaceTracking3D
                 null, 
                 (o, args) =>
                 ((TexturedFaceMeshViewer)o).OnKinectChanged((KinectSensor)args.OldValue, (KinectSensor)args.NewValue)));
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private static readonly int Bgr32BytesPerPixel = (PixelFormats.Bgr32.BitsPerPixel + 7) / 8;
 
@@ -115,54 +87,17 @@ namespace FaceTracking3D
 
         private TaskFactory taskFactory;
 
-        private FaceImageGridUnit[,] faceGrid;
 
-        private int currentMatrixRow;
-        private int currentMatrixColumn;
+        private FaceMesh faceMeshData;
 
 
-        private bool renderEnabled;
-
-        private static System.Timers.Timer aTimer;
 
         public TexturedFaceMeshViewer()
         {
             this.DataContext = this;
             this.InitializeComponent();
-            initTimer();
-            initializeFaceGrid();
-            setupAnimation();
-            renderEnabled = true;
-
         }
 
-        private void SetProperty(object target, string propertyName, object value)
-        {
-            PropertyInfo property = target.GetType().GetProperty(propertyName);
-            property.SetValue(target, value, null);
-        }
-
-        private void initializeFaceGrid()
-        {
-            faceGrid = new FaceImageGridUnit[IMAGE_MATRIX_WIDTH , IMAGE_MATRIX_HEIGHT];
-            for (int i = 0; i < IMAGE_MATRIX_WIDTH; i++)
-                for (int j = 0; j < IMAGE_MATRIX_HEIGHT; j++)
-                {
-                    faceGrid[i,j] = new FaceImageGridUnit();
-                    faceGrid[i,j].Bmp = new RenderTargetBitmap(150, 150, 96, 96, PixelFormats.Pbgra32);
-                    
-                    object element = FindName("FaceImage" + i + j);
-                    faceGrid[i,j].ImageObj = (System.Windows.Controls.Image)element;
-
-                    element = FindName("FaceImageGrid" + i + j);
-                    faceGrid[i,j].ParentGrid = (Grid)element;
-                }
-
-            currentMatrixRow = 0;
-            currentMatrixColumn = 0;
-
-            
-        }
 
         public KinectSensor Kinect
         {
@@ -174,6 +109,19 @@ namespace FaceTracking3D
             set
             {
                 this.SetValue(KinectProperty, value);
+            }
+        }
+
+        public FaceMesh FaceMeshData
+        {
+            get
+            {
+                return this.faceMeshData;
+            }
+            set
+            {
+                this.faceMeshData = value;
+                OnPropertyChanged("FaceMeshData");
             }
         }
 
@@ -449,120 +397,25 @@ namespace FaceTracking3D
             }
 
             if (faceInCentre)
-                copyFaceImage();
-        }
-
-        private void copyFaceImage()
-        {
-
-            if (renderEnabled) 
-                renderEnabled = false;
-            else
-                return;
-
-            int width = 600;
-            int height = 600;
-
-            viewport3d.Width = width;
-
-            viewport3d.Height = height;
-
-            viewport3d.Measure(new Size(width, height));
-
-            viewport3d.Arrange(new System.Windows.Rect(0, 0, width, height));
-
-//            bmp = new RenderTargetBitmap((int)viewport3d.ActualWidth, (int)viewport3d.ActualHeight, 96, 96, PixelFormats.Pbgra32);
-//            bmp.Render(viewport3d);
-
-            RenderTargetBitmap bmp = new RenderTargetBitmap((int)viewport3d.ActualWidth,
-                (int)viewport3d.ActualHeight, 96, 96, PixelFormats.Default);
-            bmp.Render(viewport3d);
-            //FaceImage.imageObj = bmp;
-//            viewport3d.Visibility = Visibility.Collapsed;
-//            FaceImage.Visibility = Visibility.Visible;
-
-            faceGrid[currentMatrixRow, currentMatrixColumn].ImageObj.Source = bmp;
-            faceGrid[currentMatrixRow, currentMatrixColumn].ImageObj.Visibility = Visibility.Visible;
-
-            if (currentMatrixRow < 3) currentMatrixRow++;
-            else
             {
-                currentMatrixRow = 0;
-                if (currentMatrixColumn < 3) currentMatrixColumn++;
-                else
-                    currentMatrixColumn = 0;
+//                copyFaceImage();
+                FaceMesh tempMeshData = new FaceMesh();
+                tempMeshData.FaceViewport = viewport3d;
+                FaceMeshData = tempMeshData;
             }
-
-
-            //this.saveFaceImageToFile(bmp);
-            //taskFactory.StartNew(() => saveFaceImageToFile(bmp));
         }
 
-        private void initTimer()
+ 
+        protected void OnPropertyChanged(PropertyChangedEventArgs e)
         {
-            // Create a timer with a ten second interval.
-            aTimer = new System.Timers.Timer(10000);
-
-            // Hook up the Elapsed event for the timer.
-            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-
-            // Set the Interval to 2 seconds (2000 milliseconds).
-            aTimer.Interval = 3000;
-            aTimer.Enabled = true;            
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+                handler(this, e);
         }
 
-        // Specify what you want to happen when the Elapsed event is  
-        // raised. 
-        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        protected void OnPropertyChanged(string propertyName)
         {
-            renderEnabled = true;
-        }
-
-
-        private void saveFaceImageToFile(RenderTargetBitmap bmp)
-        {
-            PngBitmapEncoder png = new PngBitmapEncoder();
-            png.Frames.Add(BitmapFrame.Create(bmp));
-
-            using (Stream stm = File.Create(DateTime.Now.Ticks + "_temp.png"))
-            {
-                png.Save(stm);
-            }
-            
-        }
-
-        private void setupAnimation()
-        {
-            DoubleAnimation da = new DoubleAnimation(200, 0, new Duration(TimeSpan.FromSeconds(3)));
-            da.AutoReverse = true;
-
-            BounceEase bounce = new BounceEase();
-            bounce.Bounces = 4;
-            bounce.Bounciness = 2;
-            bounce.EasingMode = EasingMode.EaseOut;
-            da.EasingFunction = bounce;
-
-            TranslateTransform rt = new TranslateTransform();
-
-            faceGrid[0,0].ParentGrid.RenderTransform = rt;
-            faceGrid[0,0].ParentGrid.RenderTransformOrigin = new Point(0.5, 0.5);
-
-            for (int i = 0; i < IMAGE_MATRIX_WIDTH; i++)
-                for (int j = 0; j < IMAGE_MATRIX_HEIGHT; j++)
-                {
-                    faceGrid[i, j].ParentGrid.RenderTransform = rt;
-                    faceGrid[i, j].ParentGrid.RenderTransformOrigin = new Point(0.5, 0.5);
-                }
-
-
-            da.RepeatBehavior = RepeatBehavior.Forever;
-            rt.BeginAnimation(TranslateTransform.XProperty, da);
-            
-        }
-
-
-        private void setupPathAnimation()
-        {
+            OnPropertyChanged(new PropertyChangedEventArgs(propertyName));
         }
     }
 }

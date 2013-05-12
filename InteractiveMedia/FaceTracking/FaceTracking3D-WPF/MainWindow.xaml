@@ -19,6 +19,10 @@
         <Grid.Background>
             <ImageBrush ImageSource="Images\Kinetech.png" Opacity="0.3"/>
         </Grid.Background>
+        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="Chocolate">
+                    <local:FaceGridPanel x:Name="faceGridPanel"/>
+        </Border>
+
         <!--
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

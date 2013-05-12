@@ -44,3 +44,5 @@ C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTrackin
 C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\FaceTracking3D-WPF\obj\Win32\Debug\FaceTracking3D-WPF.g.resources
 C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\FaceTracking3D-WPF\obj\Win32\Debug\FaceTracking3D.Properties.Resources.resources
 C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\FaceTracking3D-WPF\obj\Win32\Debug\FaceTracking3D-WPF.csproj.GenerateResource.Cache
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\FaceTracking3D-WPF\obj\Win32\Debug\FaceGridPanel.baml
+C:\Projects\InteractiveMediaLab\Kinect\Source\Repos\InteractiveMedia\FaceTracking\FaceTracking3D-WPF\obj\Win32\Debug\FaceGridPanel.g.cs
